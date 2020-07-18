@@ -135,5 +135,15 @@ const ten: number = 10;
 // numberHolder.value;
 
 class ValueHolder<T> {
-  value: T;
+  value?: T;
 }
+
+const numberWraper = (value: number): number[] => {
+  return [value];
+};
+
+const valueWrapper = <T>(value: T): T[] => {
+  return [value];
+};
+
+valueWrapper<number>(10);
